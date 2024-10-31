@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:news_app/controller/Newscontroller.dart';
 import 'package:news_app/pages/Newsdetail.dart';
 import 'package:news_app/widget/Trendingcard.dart';
 import 'package:news_app/widget/trendingtile.dart';
@@ -9,6 +10,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    NewsController controller = Get.put(NewsController());
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -19,6 +21,25 @@ class Home extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          InkWell(
+            onTap: () {
+              controller.getTrendingNews();
+            },
+            child: Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: Colors.grey,
+              ),
+              child: Icon(
+                Icons.person,
+                size: 30,
+              ),
+            ),
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
