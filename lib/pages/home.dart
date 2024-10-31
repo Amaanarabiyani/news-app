@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:news_app/pages/Newsdetail.dart';
 import 'package:news_app/widget/Trendingcard.dart';
 import 'package:news_app/widget/trendingtile.dart';
 
@@ -51,6 +53,9 @@ class Home extends StatelessWidget {
                 child: Row(
                   children: [
                     Trendingcard(
+                      onTap: () {
+                        Get.to(() => Newsdetail());
+                      },
                       title:
                           "सितंबर में थोक महंगाई बढ़कर 1.84% पर पहुंची:सब्जियों और खाने-पीने की चीजें महंगी हुईं",
                       author: 'Amaan Memon',
@@ -60,6 +65,9 @@ class Home extends StatelessWidget {
                       time: '2 hours ago',
                     ),
                     Trendingcard(
+                      onTap: () {
+                        Get.to(() => Newsdetail());
+                      },
                       title:
                           "वनडे वर्ल्डकप जीतने के बाद कमिंस की टीम में वापसी:हेड-मार्श को पैटर्नटी लीव, PAK से 3 वनडे खेलेगी AUS",
                       author: 'Amaan Memon',
@@ -69,6 +77,9 @@ class Home extends StatelessWidget {
                       time: '2 hours ago',
                     ),
                     Trendingcard(
+                      onTap: () {
+                        Get.to(() => Newsdetail());
+                      },
                       title:
                           "बाबर आजम दूसरे और तीसरे टेस्ट से बाहर:सिलेक्शन कमेटी ने शाहीन और नसीम को भी जगह नहीं दी; 15 अक्टूबर से दूसरा मुकाबला",
                       author: 'Amaan Memon',

@@ -10,7 +10,11 @@ class Articalpage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.only(
+            top: 20.0,
+            left: 8,
+            right: 8,
+          ),
           child: ListView(
             children: [
               Searchwidget(),
