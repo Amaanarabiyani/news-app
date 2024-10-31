@@ -73,7 +73,7 @@ class Newsdetail extends StatelessWidget {
                   Text(
                     "2 Days Ago",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                     ),
                   )
                 ],
